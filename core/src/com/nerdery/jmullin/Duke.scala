@@ -31,7 +31,7 @@ class Duke(world: World) {
   }
 
   def draw(batch: SpriteBatch): Unit = {
-    screenPosition.set(body.getPosition.mul(World.worldTransform))
+    screenPosition.set(body.getPosition.mul(World.worldToScreen))
     sprite.setPosition(screenPosition.x-sprite.getWidth/2f, screenPosition.y-sprite.getHeight/2f)
     sprite.setRotation(body.getTransform.getRotation)
     sprite.draw(batch)

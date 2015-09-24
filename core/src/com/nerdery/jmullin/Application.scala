@@ -14,6 +14,10 @@ class Application extends ApplicationAdapter {
 
   override def create(): Unit = {
     duke.create()
+
+    new Barrier(world,
+      new Vector2(0, 0).mul(World.screenToWorld),
+      new Vector2(Gdx.graphics.getWidth, 0).mul(World.screenToWorld))
   }
 
   override def render(): Unit = {
